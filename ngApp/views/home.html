@@ -1,0 +1,37 @@
+<h3>Click your age group to see the children in that class.</h3>
+<div class = "list-group" ng-repeat="ageGroup in controller.ageGroup"><!-- is this the right controller?-->
+
+    <a href="ngApp\views\nursery.html" class="list-group-item" ng-click = "controller.nursery()">Nursery</a>
+    <a href="ngApp\views\three.html" class="list-group-item" ng-click = "controller.three()">Three</a>
+    <a href="#" class="list-group-item">Four</a>
+    <a href="#" class="list-group-item">Five</a>
+    <a href="#" class="list-group-item">Six</a>
+    <a href="#" class="list-group-item">Seven</a>
+    <a href="#" class="list-group-item">Eight</a>
+    <a href="#"class="list-group-item">Nine</a>
+    <a href="#" class="list-group-item">Ten</a>
+    <a href="#" class="list-group-item">Eleven</a>
+
+</div>
+ <div class = "well well-sm" ng-repeat = "child in controller.child">
+ <!--  right controller?-->
+
+  <table class="table table-striped">
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>DOB</th>
+      <th>Parents</th>
+      <th>Phone</th>
+      <th>Active</th>
+    </tr>
+    <tr ng-repeat = "child in names | orderBy: '+Name'"> //<!--  right controller?-->
+      <td>{{child.#}}</td>
+      <td>{{child.name}}</td>
+      <td>{{child.dob}}</td>
+      <td>{{child.parents}}</td>
+      <td>{{child.phone}}</td>
+      <td><input type = "checkbox" ng-checked = "child.active" disabled readonly /></td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,45 @@
+  <!-- <h3>Click your age group to see the children in that class.</h3>
+  <div class = "well" ng-repeat="ageGroup in controller.ageGroup">
+    <ul class="list-group" ng-model = "ageGroup in controller.ageGroup">
+      <a href="ngApp\views\nursery.html" class="list-group-item">Nursery</a>
+      <a href="ngApp\views\three.html" class="list-group-item">Three</a>
+      <a href="#" class="list-group-item">Four</a>
+      <a href="#" class="list-group-item">Five</a>
+      <a href="#" class="list-group-item">Six</a>
+      <a href="#" class="list-group-item">Seven</a>
+      <a href="#" class="list-group-item">Eight</a>
+      <a href="#"class="list-group-item">Nine</a>
+      <a href="#" class="list-group-item">Ten</a>
+      <a href="#" class="list-group-item">Eleven</a>
+    </ul>
+  </div> -->
+
+  <!--Should I combine this with home.html?-->
+  
+<div>
+  <table class="ageGroups">
+    <tr>
+      <th>
+        <button ng-click="sortBy('name')">Name</button>
+        <span class="sortorder" ng-show="propertyName === 'name'" ng-class="orderBy:name"></span>
+      </th>
+      <th>
+        <button ng-click="sortBy('dob')">DOB</button>
+        <span class="sortorder" ng-show="propertyName === 'dob'" ng-class="orderBy:dob"></span>
+      </th>
+      <th>
+        <label ng-model="controller.parents">Parents</label>
+      </th>
+      <th>
+        <label ng-model="controller.phone">Phone Number</label>
+      </th>
+    </tr>
+    <tr ng-repeat="friend in friends | orderBy:+name">
+      <td>{{child.name}}</td>
+      <td>{{child.dob}}</td>
+      <td>{{child.parents}}</td>
+      <td>{{child.phone}}</td>
+      <td><input type = "checkbox" ng-checked = "child.active" disabled readonly /></td>
+    </tr>
+  </table>
+</div>

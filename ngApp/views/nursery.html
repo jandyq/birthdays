@@ -1,0 +1,27 @@
+<div>
+  <table class="ageGroups">
+    <tr>
+      <th>
+        <button ng-click="sortBy('name')">Name</button>
+        <span class="sortorder" ng-show="propertyName === 'name'" ng-class="orderBy:name"></span>
+      </th>
+      <th>
+        <button ng-click="sortBy('dob')">DOB</button>
+        <span class="sortorder" ng-show="propertyName === 'dob'" ng-class="orderBy:dob"></span>
+      </th>
+      <th>
+        <label ng-model="controller.parents">Parents</label>
+      </th>
+      <th>
+        <label ng-model="controller.phone">Phone Number</label>
+      </th>
+    </tr>
+    <tr ng-repeat="friend in friends | orderBy:+name">
+      <td>{{child.name}}</td>
+      <td>{{child.dob}}</td>
+      <td>{{child.parents}}</td>
+      <td>{{child.phone}}</td>
+      <td><input type = "checkbox" ng-checked = "child.active" disabled readonly /></td>
+    </tr>
+  </table>
+</div>

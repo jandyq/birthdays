@@ -1,0 +1,37 @@
+<div class = "col-md-8 col-md-offset-2">
+  <form  method="post">
+    <h3>Sign In</h3>
+    <input class = "col-md-6 col-md-offset-2" placeholder="username" type="text" ng-model = "controller.username">
+    <input class = "col-md-6 col-md-offset-2" placeholder="password" type="text" ng-model = "controller.password">
+    <button class = "btn btn-success" ng-click = "controller.login()">Login</button>
+  </form>
+</div>
+<div class = "col-md-8 col-md-offset-2">
+  <form>
+    <h3>Sign Up</h3>
+    <div class = "form-group">
+      <label for="firstName">FirstName</label>
+      <input type = "text" ng-model = "controller.firstName" class = "form-control">
+    </div>
+    <div class = "form-group">
+      <label for="lastName">LastName</label>
+      <input type = "text" ng-model = "controller.lastName" class = "form-control">
+    </div>
+    <div class = "form-group">
+      <label for="ageGroup">Age Group</label>
+      <input type = "text" ng-model = "controller.ageGroup" class = "form-control">
+    </div>
+    <div class = "form-group">
+      <label for="username">Username</label>
+      <input type = "usernam" ng-model = "controller.username" class = "form-control">
+    </div>
+    <div class = "form-group">
+      <label for="password">Password</label>
+      <input type = "password" ng-model = "controller.password" class = "form-control">
+    </div>
+    <button class = "btn btn-success" ng-click = "controller.login()">Login</button>
+  </form>
+</div>
+<br>
+<br>
+<button ng-click = "controller.logout()">Logout</button>
